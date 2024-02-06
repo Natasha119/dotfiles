@@ -1,0 +1,10 @@
+# /etc/rc.local -- rc.local for Artix Linux
+#
+# Enter your custom commands here. It will be executed on stage 2
+# before running services.
+
+ip link set eth0 up
+ip address add 10.0.0.119 dev eth0
+ip route add 10.0.0.0/8 dev eth0
+ip route add 0.0.0.0/0 via 10.0.0.1
+
